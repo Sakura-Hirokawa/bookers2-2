@@ -29,22 +29,19 @@
           <%= f.submit "Create Book" %>
         </div>
         <% end %>
-      <% end %>
 
       <h2>Book detail</h2>
-        <div class = "table">
-          <tbody>
-            <tr>
-              <td>
-                <%= attachment_image_tag @book.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg" %>
-                  <%= @book.user.name %>
-                <% end %>
-              </td>
-              <td><%= @book.title %></td>
-              <td><%= @book.body %></td>
-            </tr>
-          </tbody>
-        </div>
-      <% end %>
+      <div class = "table">
+        <tbody>
+          <tr>
+             <td>
+               <%= attachment_image_tag @book.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg" %>
+               <%= @book.user.name %>
+             </td>
+             <td><%= @book.title %></td>
+             <td><%= @book.body %></td>
+          </tr>
+        </tbody>
+      </div>
   </div>
 </div>
